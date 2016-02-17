@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bdfb7fc-0163-450a-80d1-982f71e9f388" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/usgs_state_2016.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Lab4_Read_CSV_File.iws" />
@@ -50,8 +51,8 @@
       <file leaf-file-name="usgs_state_2016.csv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/usgs_state_2016.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17606445">
-              <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.21518987">
+              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -686,7 +687,7 @@
       <workItem from="1455692342099" duration="43000" />
       <workItem from="1455692393128" duration="617000" />
       <workItem from="1455693640572" duration="17000" />
-      <workItem from="1455695669044" duration="3873000" />
+      <workItem from="1455695669044" duration="3936000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1455699093714</created>
@@ -700,11 +701,17 @@
       <option name="project" value="LOCAL" />
       <updated>1455699606486</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="initize Git">
+      <created>1455699659495</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1455699659495</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10467000" />
+    <option name="totallyTimeSpent" value="10530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1087" extended-state="0" />
@@ -749,7 +756,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="initize Git" />
+    <option name="LAST_COMMIT_MESSAGE" value="initize Git" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1069,8 +1077,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/usgs_state_2016.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17606445">
-          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.21518987">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
           <folding />
         </state>
       </provider>
