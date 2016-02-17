@@ -1,34 +1,17 @@
 <?php
 /**
  * Created by IntelliJ IDEA.
- * User: Rib
+ * User: Sai
  * Date: 2/16/2016
  * Time: 8:26 PM
  */
 
-
-//define('SCORE', 'score');
-//
-//$score = $_GET[SCORE];
-//
-//
-//
-//if (!isset($_GET[SCORE])) {
-//    echo "<h1>You need to specify the score</h1>";
-//    exit;
-//
-//}
-//
-//echo "the score is " . $score . '.<br>';
-//
-//for($i = 0; $i < 10; $i++){
-//    $score++;
-//    echo $score . '<br>';
-//}
-//
-//echo "Hello World!";
-
 $funding = [];
+
+define('GROSS_STATE_PRODUCT', 4);
+define('STATE_AND_LOCAL_SPENDING', 3);
+define('AVERAGE_STATE_RATIO', 19.61);
+
 
 $file = fopen('data/usgs_state_2016.csv', 'r');
 if (!$file){
@@ -45,11 +28,9 @@ do{
     $funding[] = $line;
 } while ($line);
 
+fclose($file);
 
 ?>
-
-
-
 
 
 
@@ -57,7 +38,9 @@ do{
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Montana 1992</title>
+    <title>Education Funding by State</title>
+
+    <link rel="stylesheet" type="text/css" href="style/styles.css" />
 
     <style>
         td, th {
@@ -79,34 +62,25 @@ do{
 </head>
 <body>
 
-<table width="750">
+
+<h1>Education Funding by State</h1>
+
+<p>Source of ths data can be found <a href="http://www.usgovernmentspending.com/compare_state_spending">here</a>.</p>
+<p>Final columns to determine the percentage of a state's Gross product spent on education and whether that state is higher or lower than national-average was added by Sai Del Cielo.  Each state's political affiliation is based on it's electoral vote in the 2012 eleciton.</p>
+
+<p>Based on this data, it can be hypothsized that one or more of the following may be the case: <br>
+    <ul>
+        <li>States that vote Democrat tend to invest more in education.</li>
+        <li>States that invest in education tend to vote more Democrat.</li>
+        <li>States with more education tend to vote Democrat.</li>
+        <li>Republican leaders oppose funding for education.</li>
+    </ul>
+</p>
 
 
-<!--    <B><DT>Datafile Name:</B>   Montanac Outlook Poll-->
-<!--    <B><DT>Datafile Subjects:</B>   <dsubjects>-->
-<!--        <A HREF="/cgi-bin/dasl.cgi?query=Economics&submit=Search&metaname=dsubjects&sort=swishrank">Economics</a>-->
-<!--        ,-->
-<!--        <A HREF="/cgi-bin/dasl.cgi?query=Finance&submit=Search&metaname=dsubjects&sort=swishrank">Finance</a>-->
-<!--        ,-->
-<!--        <A HREF="/cgi-bin/dasl.cgi?query=Consumer&submit=Search&metaname=dsubjects&sort=swishrank">Consumer</a>-->
-<!---->
-<!--    </dsubjects>-->
-<!--    <B><DT>Story Names:</B>-->
-<!--    <A HREF="../Stories/montana.html">Montana Outlook Poll</A>-->
-<!---->
-<!--    <B><DT>Reference:</B>   Bureau of Business and Economic Research, University of Montana, May 1992-->
-<!--    <B><DT>Authorization:</B>   free use-->
-<!--    <B><DT>Description:</B>   The Montana poll asked a random sample of Montana residents whether their-->
-<!--    personal financial status was the worse, the same, or better than a year ago, and-->
-<!--    whether they thought the state economic outlook was better over the next year.-->
-<!--    This file contains these items and accompanying demographics about the-->
-<!--    respondents. The file contains results for every other person included in the-->
-<!--    poll.-->
-<!---->
-<!--    <B><DT>Number of cases:</B>-->
+<b>All figures in billions except Population, which is in millions.</b>
 
-
-    <table width="500">
+    <table width="750">
         <tr>
             <th>State</th>
             <th>State Spending</th>
@@ -115,104 +89,134 @@ do{
             <th>Gross State Product</th>
             <th>Real State Growth</th>
             <th>Population (million)</th>
+            <th>Spending ratio (GSP divided by State & Local</th>
+            <th>State higher or lower than average</th>
         </tr>
+
         <?php
 
+        $democratic_higher = 0;
+        $democratic_lower = 0;
+        $republican_higher = 0;
+        $republican_lower = 0;
 
-//        foreach($funding as $key => $subarray) {
-//            //Age
-//            switch ($funding[$key][0]) {
-//                case "1":
-//                    $funding[$key][0] = '0 - 35';
-//                    break;
-//                case "2":
-//                    $funding[$key][0] = '35 - 54';
-//                    break;
-//                case "3":
-//                    $funding[$key][0] = '55+';
-//                    break;
-//            }
-//            //Sex
-//            switch ($funding[$key][1]) {
-//                case "0":
-//                    $funding[$key][1] = 'male';
-//                    break;
-//                case "1":
-//                    $funding[$key][1] = 'female';
-//                    break;
-//            }
-//            // Income
-//            switch ($funding[$key][2]) {
-//                case "1":
-//                    $funding[$key][2] = '0 - 20k';
-//                    break;
-//                case "2":
-//                    $funding[$key][2] = '20 - 35k';
-//                    break;
-//                case "3":
-//                    $funding[$key][2] = '35k+';
-//                    break;
-//            }
-//            //Politacl Party
-//            switch ($funding[$key][3]) {
-//                case "1":
-//                    $funding[$key][3] = '<font color="blue"> Democrat </font>';
-//                    break;
-//                case "2":
-//                    $funding[$key][3] = '<font color="#663399">Independent</font>';
-//                    break;
-//                case "3":
-//                    $funding[$key][3] = '<font color="red">Republican</font>';
-//                    break;
-//            }
-//            //Area
-//            switch ($funding[$key][4]) {
-//                case "1":
-//                    $funding[$key][4] = 'Western';
-//                    break;
-//                case "2":
-//                    $funding[$key][4] = 'NorthEastern';
-//                    break;
-//                case "3":
-//                    $funding[$key][4] = 'Southern';
-//                    break;
-//            }
-//            //Financial Status
-//            switch ($funding[$key][5]) {
-//                case "1":
-//                    $funding[$key][5] = 'Worse';
-//                    break;
-//                case "2":
-//                    $funding[$key][5] = 'Same';
-//                    break;
-//                case "3":
-//                    $funding[$key][5] = 'Better';
-//                    break;
-//            }
-//            //Economic Outlook
-//            switch ($funding[$key][6]) {
-//                case "0":
-//                    $funding[$key][6] = 'Better';
-//                    break;
-//                case "1":
-//                    $funding[$key][6] = 'Not Better';
-//                    break;
-//            }
-//            unset($key);
-//            unset($subarray);
-//        }
 
         foreach($funding as $row) {
-            echo('<tr>');
-            echo('<td>');
-            echo(implode('</td><td>', $row));
-            echo('</td>');
-//            echo '<td>' . $row[$line] . '</td>';
-            echo('</tr>');
-        } ?>
+            $spending_ratio = number_format((float)($row[GROSS_STATE_PRODUCT] / $row[STATE_AND_LOCAL_SPENDING]), 2, '.', '');
+            $high_or_low = '';
+            $higher_tally = false;
+
+
+            if ($spending_ratio > AVERAGE_STATE_RATIO){
+                $high_or_low = "<td bgcolor='#7fffd4'> higher </td>";
+                $higher_tally = true;
+            }
+            if ($spending_ratio < AVERAGE_STATE_RATIO){
+                $high_or_low = "<td bgcolor='#ff4500'> lower </td>";
+            }
+
+
+            switch($row[0]) {
+                case "Arizona";
+                case "Idaho":
+                case "Wyoming";
+                case "Utah":
+                case "North Dakota":
+                case "South Dakota":
+                case "Nebraska":
+                case "Kansas":
+                case "Texas":
+                case "Missouri":
+                case "Arkansas":
+                case "Oklahoma":
+                case "Indiana":
+                case "Kentucky":
+                case "Tennessee":
+                case "Mississippi":
+                case "Alabama":
+                case "Georgia":
+                case "Alaska":
+                case "North Carolina":
+                case "South Carolina":
+                case "Louisiana":
+                case "West Virginia":
+                case "Montana":
+                    echo('<tr bgcolor="red">');
+                    echo('<td>');
+                    echo(implode('</td><td>', $row));
+                    echo('</td>');
+                    echo '<td>' . $spending_ratio  . '</td>';
+                    echo $high_or_low;
+                    echo('</tr>');
+                    if ($higher_tally){
+                        $republican_higher += 1;
+                    }
+                    if (!$higher_tally){
+                        $republican_lower += 1;
+                    }
+                    break;
+                case "Oregon":
+                case "California":
+                case "Nevada":
+                case "Colorado":
+                case "Washington":
+                case "New Mexico":
+                case "Minnesota":
+                case "Iowa":
+                case "Wisconsin":
+                case "Illinois":
+                case "Ohio":
+                case "Michigan":
+                case "Virginia":
+                case "Pennsylvania":
+                case "New York":
+                case "Maine":
+                case "New Hampshire":
+                case "New Jersey":
+                case "Florida":
+                case "Vermont":
+                case "Hawaii":
+                case "Rhode Island":
+                case "Connecticut":
+                case "Delaware":
+                case "District of Columbia":
+                case "Maryland":
+                case "Massachusetts":
+
+                    echo('<tr bgcolor="#00bfff">');
+                    echo('<td>');
+                    echo(implode('</td><td>', $row));
+                    echo('</td>');
+                    echo '<td>' . $spending_ratio  . '</td>';
+                    echo $high_or_low;
+                    echo('</tr>');
+
+                if ($higher_tally){
+                    $democratic_higher += 1;
+                }
+                if (!$higher_tally){
+                    $democratic_lower += 1;
+                }
+                break;
+
+                default:
+                    echo('<tr>');
+                    echo('<td>');
+                    echo(implode('</td><td>', $row));
+                    echo('</td>');
+                    echo '<td>' . $spending_ratio  . '</td>';
+
+                    echo('</tr>');
+
+                break;
+            }
+        }
+
+        echo '<b> <p> Republican states with a higher than national-average education spending ratio: ' . $republican_higher . '<br>';
+        echo 'Republican states with a lower than national-average education spending ratio: ' . $republican_lower . '<br>';
+        echo 'Democrat states with a higher than national-average education spending ratio: ' . $democratic_higher . '<br>';
+        echo 'Democrat states with a lower than national-average education spending ratio: ' . $democratic_lower . '</p> </b>';
+        ?>
     </table>
-
-
-</table>
 
 </body>
