@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7bdfb7fc-0163-450a-80d1-982f71e9f388" name="Default" comment="">
+    <list default="true" id="7bdfb7fc-0163-450a-80d1-982f71e9f388" name="Default" comment="Most of project complete.">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stats.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Lab4_Read_CSV_File.iws" />
@@ -25,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20568562">
+            <state vertical-scroll-proportion="-4.730769">
               <caret line="67" column="117" selection-start-line="67" selection-start-column="117" selection-end-line="67" selection-end-column="117" />
               <folding>
                 <element signature="e#6#91#0#PHP" expanded="true" />
@@ -50,24 +51,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="usgs_state_2016.csv" pinned="false" current-in-tab="false">
+      <file leaf-file-name="usgs_state_2016.csv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/usgs_state_2016.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="69" selection-start-line="0" selection-start-column="69" selection-end-line="0" selection-end-column="69" />
+            <state vertical-scroll-proportion="0.7900641">
+              <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stats.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stats.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="386" column="7" selection-start-line="221" selection-start-column="0" selection-end-line="386" selection-end-column="7" />
-              <folding>
-                <element signature="e#200#7936#0#PHP" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -721,7 +710,7 @@
       <workItem from="1455693640572" duration="17000" />
       <workItem from="1455695669044" duration="7178000" />
       <workItem from="1455707542221" duration="2219000" />
-      <workItem from="1455709778886" duration="5334000" />
+      <workItem from="1455709778886" duration="5436000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1455699093714</created>
@@ -759,11 +748,17 @@
       <option name="project" value="LOCAL" />
       <updated>1455715024904</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Most of project complete.">
+      <created>1455715144542</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1455715144542</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21325000" />
+    <option name="totallyTimeSpent" value="21427000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -809,7 +804,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="initize Git" />
-    <option name="LAST_COMMIT_MESSAGE" value="initize Git" />
+    <MESSAGE value="Most of project complete." />
+    <option name="LAST_COMMIT_MESSAGE" value="Most of project complete." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -846,16 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stats.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="386" column="7" selection-start-line="221" selection-start-column="0" selection-end-line="386" selection-end-column="7" />
-          <folding>
-            <element signature="e#200#7936#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lab4_Read_CSV_File.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -885,16 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stats.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="386" column="7" selection-start-line="221" selection-start-column="0" selection-end-line="386" selection-end-column="7" />
-          <folding>
-            <element signature="e#200#7936#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lab4_Read_CSV_File.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1089,16 +1065,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stats.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="386" column="7" selection-start-line="221" selection-start-column="0" selection-end-line="386" selection-end-column="7" />
-          <folding>
-            <element signature="e#200#7936#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1110,17 +1076,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/usgs_state_2016.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="69" selection-start-line="0" selection-start-column="69" selection-end-line="0" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20568562">
+        <state vertical-scroll-proportion="-4.730769">
           <caret line="67" column="117" selection-start-line="67" selection-start-column="117" selection-end-line="67" selection-end-column="117" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="true" />
@@ -1128,6 +1086,14 @@
             <marker date="1455715005534" expanded="true" signature="3996:4038" placeholder="..." />
             <marker date="1455715005534" expanded="true" signature="6356:6479" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/usgs_state_2016.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7900641">
+          <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
